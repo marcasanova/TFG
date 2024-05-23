@@ -1,0 +1,25 @@
+{
+  "name": "tfg",
+  "version": "1.0.0",
+  "description": "Trabajo del TFG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcasanova/TFG.git"
+  },
+  "keywords": [
+    "TFG",
+    "riego",
+    "automatizacion",
+    "plantas"
+  ],
+  "author": "Marc Casanova Payá",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcasanova/TFG/issues"
+  },
+  "homepage": "https://github.com/marcasanova/TFG#readme"
+}
