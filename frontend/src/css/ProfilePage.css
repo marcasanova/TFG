@@ -1,0 +1,250 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh; /* Cambiar height por min-height */
+  width: 100%; /* Ocupa todo el ancho */
+  background: linear-gradient(249deg, #0e9915, #20a0e8); /* Gradiente animado */
+  background-size: 400% 400%;
+  animation: AnimationName 38s ease infinite; /* Animación suave */
+  overflow-y: auto; /* Permitir scroll solo vertical */
+  padding: 2rem; /* Espaciado interno */
+}
+
+/* Animación del gradiente */
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 76%;
+  }
+  50% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 76%;
+  }
+}
+.profile-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para destacar texto */
+}
+
+/* Sección de la tarjeta de perfil */
+.profile-card {
+  background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
+  backdrop-filter: blur(10px); /* Desenfoque para el fondo */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra pronunciada */
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 20px; /* Ancho de la imagen */
+  height: 20px; /* Altura de la imagen */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  vertical-align: middle; /* Alinea la imagen con el texto */
+}
+
+.profile-info-section {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.profile-image-container {
+  text-align: center;
+  position: relative;
+  max-width: 500px; /* Limita el ancho del contenedor de la imagen */
+
+}
+
+.profile-image {
+  border-radius: 30%;
+  width: 200px; 
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Borde tenue */
+
+}
+
+.file-input {
+  display: none;
+}
+
+  /* Estilo para el botón personalizado */
+  .custom-file-upload {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Ajuste del tamaño del botón */
+    background-color: white; /* Mantener consistencia con los demás botones */
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Espacio debajo del botón */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: white; /* Cambio de color al hover */
+    transform: scale(1.05); /* Efecto de hover */
+  }
+  
+  .custom-file-upload:focus{
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Resaltado suave al enfocar */
+  }
+  
+  .profile-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea todo al centro */
+  }
+
+  .upload-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Ajuste del tamaño del botón */
+    background-color: white; /* Mantener consistencia con los demás botones */
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Espacio debajo del botón */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .upload-btn:hover {
+    background-color: white;
+    transform: scale(1.05); /* Hace que crezca al pasar el mouse */
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  
+  .info-block p {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  /* Nueva tarjeta para la sección de actualización de datos */
+  .update-section {
+    background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
+    backdrop-filter: blur(10px); /* Desenfoque para el fondo */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra pronunciada */
+    padding: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 2rem;
+  }
+  .update-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+  }
+  
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .profile-input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el ancho */
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Añade un espacio debajo del input */
+  }
+
+  .profile-input:focus{
+    box-shadow: 0 0 8px rgba(95, 95, 95, 0.164);
+    outline: none; /* Elimina el borde negro predeterminado */
+  }
+
+  .form-btn {
+    background-color: rgba(255, 255, 255, 0.836); /* Fondo translúcido */
+    color: rgba(43, 43, 43, 0.829); /* Texto oscuro */
+    padding: 0.8rem 1rem; /* Mismo padding */
+    width: 250px;
+    font-size: 0.95rem; /* Aumenta el tamaño del texto */
+    font-weight: 600;
+    border-radius: 8px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    margin-left: 1.8rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .form-btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+  }
+  /* Mensajes de éxito y error */
+  .success-message {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .error-message {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .delete-section {
+    margin-top: 0.7rem;
+    display: flex; /* Habilitar flexbox */
+    gap: 1rem; /* Espaciado entre botones */
+    justify-content: center; /* Centrar los botones horizontalmente */
+  }
+  .delete-account-btn {
+    background-color: rgb(153, 36, 36);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .delete-account-btn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+  }
+  
+  .logout-btn {
+    background-color: rgb(197, 178, 8);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: darkgoldenrod;
+    transform: scale(1.05);
+  }

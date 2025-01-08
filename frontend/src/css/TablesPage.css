@@ -1,0 +1,229 @@
+/* Contenedor principal */
+
+body{
+  overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+}
+
+.tables-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100%; /* Ocupa todo el ancho */
+  min-height: 100vh;
+  background: linear-gradient(249deg, #0e9915, #20a0e8); /* Gradiente inicial */
+  background-size: 400% 400%; /* Tamaño para animación */
+  animation: AnimationName 38s ease infinite; /* Animación del gradiente */
+  overflow-y: auto; /* Permitir scroll si hay demasiado contenido */
+  padding: 2rem; /* Espaciado interno para separar las secciones del borde */
+
+}
+
+/* Animación del gradiente */
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 76%;
+  }
+  50% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 76%;
+  }
+}
+
+.tables-container h1 {
+  font-size: 2.5rem;
+  color: white; /* Texto blanco para contraste */
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para resaltar texto */
+}
+
+/* Sección para crear nueva mesa */
+.create-table-section {
+  margin-bottom: 3rem; /* Añadir espacio entre esta sección y la siguiente */
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más marcada para relieve */
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde suave */
+  transition: max-width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-table-section h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  padding-bottom: 1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para resaltar texto */
+}
+
+/* Estilo de los inputs */
+.table-input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 550px;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido para inputs */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+.table-input:focus {
+  box-shadow: 0 0 8px rgba(95, 95, 95, 0.164);
+  outline: none; /* Elimina el borde negro predeterminado */
+
+}
+
+/* Botón para crear mesas */
+.create-table-btn {
+  background-color: rgba(255, 255, 255, 0.836);
+  color: rgba(43, 43, 43, 0.829);
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra externa */
+}
+
+.create-table-btn:hover {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
+}
+
+/* Sección de la lista de mesas */
+.tables-list-section {
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra para dar relieve */
+  max-width: 800px; /* Sección más ancha */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde suave */
+  transition: max-width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tables-list-section h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  padding-bottom: 1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para resaltar texto */
+}
+
+.tables-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crear columnas flexibles */
+  gap: 1.5rem; /* Espacio entre las mesas */
+  width: 100%;
+}
+
+/* Elementos de la lista de mesas */
+.table-item {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Relieve básico */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Centrar contenido en el eje horizontal */
+}
+
+.table-item p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  text-align: left; /* Alinea el texto hacia la izquierda */
+  margin: 0.5rem 0; /* Espaciado consistente entre los párrafos */
+  
+}
+
+.table-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más marcada al pasar el mouse */
+  transform: translateY(-5px); /* Efecto de desplazamiento */
+}
+
+/* Contenedor de la imagen */
+.table-image-container {
+  width: 100%;
+  height: 150px; /* Altura fija para las imágenes */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5; /* Fondo de las imágenes */
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+/* Imagen dentro del contenedor */
+.table-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegurar que la imagen se recorte bien */
+  border-radius: 8px;
+}
+
+/* Placeholder para mesas sin imagen */
+.table-placeholder {
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Mensajes de error y éxito */
+.error-message,
+.success-message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .tables-list {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, solo mostrar una columna */
+  }
+
+  .create-table-section,
+  .tables-list-section {
+    padding: 1.8rem;
+    max-width: 100%;
+  }
+
+  .tables-container h1 {
+    font-size: 2rem;
+  }
+
+  .table-input {
+    font-size: 1rem;
+  }
+
+  .create-table-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+}

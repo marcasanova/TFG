@@ -1,0 +1,141 @@
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100%; /* Ocupa todo el ancho */
+  background: linear-gradient(249deg, #0e9915, #20a0e8); /* Gradiente de fondo */
+  background-size: 400% 400%;
+  animation: AnimationName 38s ease infinite; /* Animación suave del gradiente */
+  overflow-y: auto; /* Permitir scroll solo vertical */
+  padding: 2rem; /* Espaciado interno */
+  box-sizing: border-box;
+}
+
+/* Animación del gradiente */
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 76%;
+  }
+  50% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 76%;
+  }
+}
+
+/* Tarjeta principal */
+.login-card {
+  background: rgba(255, 255, 255, 0.3); /* Fondo translúcido */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra pronunciada */
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 550px; /* Limitar el ancho máximo */
+  text-align: center; /* Centrar el contenido */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Título del formulario */
+.login-card h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para destacar texto */
+}
+
+/* Estilo de los inputs */
+.login-card input {
+  width: 94%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8); /* Fondo translúcido */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilo al enfocar los inputs */
+.login-card input:focus {
+  box-shadow: 0 0 8px rgba(95, 95, 95, 0.2); /* Resaltado al enfocar */
+  outline: none; /* Elimina el borde negro predeterminado */
+}
+
+/* Botón de login */
+.login-card button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(43, 43, 43, 0.9);
+  padding: 0.7rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Relieve externo */
+}
+
+/* Hover para el botón */
+.login-card button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Mensajes de error */
+.error-message {
+  color: rgba(255, 69, 58, 0.9); /* Rojo suave */
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Enlace para registrarse */
+.register-prompt {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.register-prompt a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover para el enlace */
+.register-prompt a:hover {
+  color: black;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 2rem;
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .login-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-card input {
+    font-size: 0.9rem;
+  }
+
+  .login-card button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .register-prompt {
+    font-size: 0.8rem;
+  }
+}

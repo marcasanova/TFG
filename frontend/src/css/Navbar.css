@@ -1,0 +1,51 @@
+/* Contenedor principal de la Navbar */
+.navbar {
+  position: fixed; /* Mantenerla fija en la parte izquierda */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 80px; /* Ancho de la barra lateral */
+  background: transparent; /* Fondo verde oscuro */
+  display: flex;
+  flex-direction: column; /* Elementos en orientación vertical */
+  justify-content: center; /* Centrar los elementos verticalmente */
+  align-items: center; /* Centrar los elementos horizontalmente */
+  padding: 1rem 0; /* Espaciado interno */
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de la Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  gap: 2rem; /* Espaciado entre los enlaces */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Asegura que ocupen todo el ancho disponible */
+}
+
+/* Cada ítem de la lista */
+.navbar ul li {
+  width: 100%; /* Cada ítem ocupa todo el ancho de la barra */
+  text-align: center; /* Centrar el texto */
+}
+
+/* Enlaces */
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1.2rem; /* Tamaño de fuente ajustado */
+  color: white; /* Color blanco */
+  font-weight: 600;
+  padding: 0.5rem 0; /* Espaciado interno en los enlaces */
+  display: block; /* Asegurar que el área clicable sea toda la línea */
+  transition: transform 0.3s ease; /* Eliminar background-color del hover */
+}
+
+/* Hover del icono */
+.navbar ul li a .material-icons:hover {
+  color: white; /* Cambiar color del icono en el hover */
+  transform: scale(1.3); /* Agrandar ligeramente solo el icono */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}

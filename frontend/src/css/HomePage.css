@@ -1,0 +1,211 @@
+/* Estilo global para h2 */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo exclusivo para el título "Asistente IA" */
+.assistant-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FF66CC; /* Color rosa */
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+
+/* Contenedor principal */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* Cambiar height por min-height */
+  width: 100%;
+  /* Ocupa todo el ancho */
+  background: linear-gradient(249deg, #0e9915, #20a0e8);
+  /* Gradiente animado */
+  background-size: 400% 400%;
+  animation: AnimationName 38s ease infinite;
+  /* Animación suave */
+  overflow-y: auto;
+  /* Permitir scroll solo vertical */
+  padding: 2rem;
+  /* Espaciado interno */
+}
+
+/* Animación del gradiente */
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 76%;
+  }
+
+  50% {
+    background-position: 100% 25%;
+  }
+
+  100% {
+    background-position: 0% 76%;
+  }
+}
+
+.homepage-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  /* Sombra para destacar texto */
+}
+
+/* Tarjeta principal */
+.main-card {
+  background: rgba(255, 255, 255, 0.3);
+  /* Fondo translúcido */
+  backdrop-filter: blur(10px);
+  /* Desenfoque para el fondo */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  /* Sombra pronunciada */
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  /* Limitar ancho máximo */
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Borde tenue */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Información meteorológica */
+.weather-section {
+  margin-bottom: 2rem;
+}
+
+.weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.weather-card {
+  background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.weather-card p {
+  font-size: 1rem;
+  color: #00796b;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Contenedor de OpenAI */
+.prompt-input {
+  width: 96%;
+  min-height: 100px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: #2b2b2b;
+  outline: none;
+  resize: none;
+}
+
+
+.prompt-input:focus {
+  border-color: rgba(32, 160, 232, 0.8);
+}
+
+/* Botón de envío */
+.send-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(45deg, #FF66CC, #FF99CC);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(255, 102, 204, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+/* Efectos al pasar el cursor por encima */
+.send-button:hover {
+  background: linear-gradient(45deg, #FF99CC, #FF66CC);
+  box-shadow:
+    0 8px 15px rgba(255, 102, 204, 0.4),
+    0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Estado deshabilitado */
+.send-button:disabled {
+  background: rgba(255, 102, 204, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.response-container {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.response-container h3 {
+  font-size: 1.5rem;
+  color: rgba(43, 43, 43, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.response-container p {
+  font-size: 1.2rem;
+  color: rgba(43, 43, 43, 0.8);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+  .weather-info,
+  .statistics-list,
+  .recommendations-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statistics-item {
+    text-align: center;
+  }
+
+  .homepage-title {
+    font-size: 2rem;
+  }
+}
